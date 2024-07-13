@@ -6,7 +6,7 @@ class walletProvider extends http {
     super({ baseURL: baseURL, path: 'valuable_wallets' });
   }
 
-  public getValuableWallets = async (params: unknown) => await this.httpService.get('', { params });
+  public getValuableWallets = async (params?: unknown) => await this.httpService.get('', { params });
 }
 const walletService = new walletProvider();
 export default walletService;
